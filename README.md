@@ -1,3 +1,3 @@
 # ControleFinanceiro
 
-Sistema de Controle Financeiro exisido pelo Curso COTI como projeto final.
+Projeto Final do curso WebDeveloper C#.Net ministrado pela COTI Informática.
