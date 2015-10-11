@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "BuscaReceita";
+    Layout = "~/Views/Templates/_Layout.cshtml";
+}
+
+<div class="container" style="margin-top:10px;">
+    <div class="row">
+         @using (Html.BeginForm("GerarBuscaRelatorioReceita", "UsuarioAutenticado", FormMethod.Post))
+         {
+             <fieldset style="margin-top:10px;">  
+                 <legend><h2>Relatório de Receitas</h2></legend>
+                 <div class="well"> 
+                     <div class="formulario" style="width:50%; margin: 0;">
+                        <div style="color:red;">
+                             @Html.ValidationSummary()
+                        </div>   
+                          <label>Selecione o formato:</label>
+                          <select name="formato">
+                             <option value="1">PDF</option>
+                             <option value="2">Word</option>
+                             <option value="3">Excel</option>
+                         </select>
+                         <br />
+                         <label>Data de Recebimento Inicio </label>
+                         <input class="form-control input-md" data-val="true" data-val-required="Por favor, Informe a Data de Pagamento." id="DataIncio" name="DataIncio" type="date" value="">
+                      
+                         <label>Data de Recebimento Fim </label>
+                         <input class="form-control input-md" data-val="true" data-val-required="Por favor, Informe a Data de Pagamento." id="DataFim" name="DataFim" type="date" value="">
+     
+
+                         @ViewBag.Mensagem
+                         <input type="submit" value="Gerar Relatório" class="btn btn-primary btn-lg btn-block" />
+                     </div>
+                 </div>                    
+             </fieldset>        
+         }
+    </div>
+</div>
+
+

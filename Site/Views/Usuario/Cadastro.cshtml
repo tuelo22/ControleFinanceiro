@@ -1,0 +1,48 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width">
+        <title>Gestor Financeiro - Acesso </title>
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link href="~/Content/bootstrap.css" rel="stylesheet" />
+        <link href="~/css/font-awesome.css" rel="stylesheet" />
+        <link href="~/css/style.css" rel="stylesheet" />
+        <script src="~/Scripts/bootstrap.js"></script>
+    
+    </head>
+<body>
+    <div class="main">
+        <div class="formulario well" style="margin:15% auto; width:50%;">
+        <h2>Cadastro de Usuario</h2>
+
+        @model Site.Models.UsuarioModelCadastro
+
+        @using (Html.BeginForm("CadastrarUsuario", "Usuario", FormMethod.Post))
+        {
+            <div style="color:red;">
+                @Html.ValidationSummary()
+            </div>    
+            <div class="form-group">
+                @Html.TextBoxFor(model => model.Nome, new { @placeholder = "Nome", @class = "form-control" })
+                @Html.TextBoxFor(model => model.Login, new { @placeholder = "Usuário", @class = "form-control" })
+                @Html.PasswordFor(model => model.Senha, new { @placeholder = "Senha", @class = "form-control" })
+                @Html.PasswordFor(model => model.SenhaConfirm, new { @placeholder = "Repita a Senha", @class = "form-control" })
+
+                @ViewBag.Mensagem
+                <input type="submit" value="Cadastrar Usuário" class="btn btn-success btn-lg btn-block" />
+            </div> 
+            <a href="/Usuario/Login" class="btn btn-primary btn-lg btn-block" role="button" >Voltar</a>           
+        }
+        </div>
+    </div>
+</body>
+</html>
+
+       

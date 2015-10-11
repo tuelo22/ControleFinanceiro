@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Receita";
+    Layout = "~/Views/Templates/_Layout.cshtml";
+}
+<div class="container" style="margin-top:10px;">
+    <div class="row">
+         @model Site.Models.ReceitaModelCadastro
+
+         @using (Html.BeginForm("CadastrarReceita", "UsuarioAutenticado", FormMethod.Post))
+         {
+             <fieldset style="margin-top:10px;">  
+                 <legend><h2>Cadastrar de Receita</h2></legend>
+                 <div class="well"> 
+                     <div class="formulario" style="width:50%; margin: 0;">
+                        <div style="color:red;">
+                             @Html.ValidationSummary()
+                        </div>   
+
+                         @Html.LabelFor(model => model.Nome)
+                         @Html.TextBoxFor(model => model.Nome, new { @placeholder = "Nome", @class = "form-control input-md" })
+                         @Html.LabelFor(model => model.DataRecebimento)
+                         @Html.TextBoxFor(model => model.DataRecebimento, new {@class = "form-control input-md", @type="date" })
+                         @Html.LabelFor(model => model.Valor)
+                         @Html.TextBoxFor(model => model.Valor, new { @placeholder = "Valor", @class = "form-control input-md" })
+
+                         @ViewBag.Mensagem
+                         <input type="submit" value="Cadastrar Receita" class="btn btn-success btn-lg btn-block" />
+                     </div>
+                 </div>                    
+             </fieldset>        
+         }
+    </div>
+</div>

@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "EditarContaPagar";
+    Layout = "~/Views/Templates/_Layout.cshtml";
+}
+
+@model Site.Models.ContaPagarModelAtualizar
+<div class="container">
+    <div class="row">
+        <h2>Atualizar Conta a Pagar</h2>
+        <hr />
+    </div>
+    <div class="row">
+         @using (Html.BeginForm("SelecionarContaPagarAtualiza", "UsuarioAutenticado", FormMethod.Post))
+         {
+                 <div class="well"> 
+                     <div class="formulario" style="width:50%; margin: 0;">
+                        <label>Selecione a Receita: </label>
+                        @Html.DropDownList("ContasPagar", "- Selecione uma Opção -") 
+                        <input type="submit" value="Selecione a Conta a Pagar:" class="btn btn-primary btn-lg btn-block" />
+                     </div>
+                 </div>                        
+         }
+    </div>
+
+    <div class="row">
+        <div class="well"> 
+            <div class="formulario" style="width:50%; margin: 0;">
+                 @using (Html.BeginForm("AtualizaContaPagar", "UsuarioAutenticado", FormMethod.Post))
+                 {  
+                                <div style="color:red;">
+                                     @Html.ValidationSummary()
+                                </div>   
+                                 @Html.HiddenFor(model => model.IdContaPagar)
+                                 @Html.LabelFor(model => model.Nome)
+                                 @Html.TextBoxFor(model => model.Nome, new { @placeholder = "Nome", @class = "form-control input-md" })
+                                 @Html.LabelFor(model => model.DataPagamento)
+                                 @Html.TextBoxFor(model => model.DataPagamento, new {@class = "form-control input-md", @type="date" })
+                                 @Html.LabelFor(model => model.Valor)
+                                 @Html.TextBoxFor(model => model.Valor, new { @placeholder = "Valor", @class = "form-control input-md" })
+
+                                 @ViewBag.Mensagem
+                                 <input type="submit" value="Atualizar Receita" class="btn btn-success btn-lg btn-block" />
+                                          
+                 } 
+            </div>
+      </div>    
+        
+    </div>
+</div>
+

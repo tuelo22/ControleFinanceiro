@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Templates/_Layout.cshtml";
+}
+<div class="well">
+<div class="alert alert-success">
+    Bem vindo ao Controle Financeiro @ViewBag.Usuario !
+</div>
+
+<h4>Situação das Finanças</h4>
+    <ul>
+        <li style="color:green;">Receitas: R$ @ViewBag.TotalReceita </li>
+        <li style="color:red;">Contas a Pagar: R$ @ViewBag.TotalContasPagar </li>
+    </ul>
+    
+</div>

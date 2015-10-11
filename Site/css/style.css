@@ -1,0 +1,17 @@
+﻿body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #000000;
+    line-height: 30px;
+    background-color: #d1d1d1;
+}
+
+.formulario {
+    margin:auto;
+}
+    .formulario input {
+         margin: 10px 0px;
+         font-size: 18px;
+    }
+

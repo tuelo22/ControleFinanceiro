@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetReceita" targetNamespace="http://tempuri.org/DataSetReceita.xsd" xmlns:mstns="http://tempuri.org/DataSetReceita.xsd" xmlns="http://tempuri.org/DataSetReceita.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="BancoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BancoConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.BancoConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetReceita" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetReceita" msprop:Generator_UserDSName="DataSetReceita">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RECEITA" msprop:Generator_TableClassName="RECEITADataTable" msprop:Generator_TableVarName="tableRECEITA" msprop:Generator_TablePropName="RECEITA" msprop:Generator_RowDeletingName="RECEITARowDeleting" msprop:Generator_RowChangingName="RECEITARowChanging" msprop:Generator_RowEvHandlerName="RECEITARowChangeEventHandler" msprop:Generator_RowDeletedName="RECEITARowDeleted" msprop:Generator_UserTableName="RECEITA" msprop:Generator_RowChangedName="RECEITARowChanged" msprop:Generator_RowEvArgName="RECEITARowChangeEvent" msprop:Generator_RowClassName="RECEITARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn" msprop:Generator_UserColumnName="CODIGO" type="xs:int" minOccurs="0" />
+              <xs:element name="NOME" msprop:Generator_ColumnVarNameInTable="columnNOME" msprop:Generator_ColumnPropNameInRow="NOME" msprop:Generator_ColumnPropNameInTable="NOMEColumn" msprop:Generator_UserColumnName="NOME" type="xs:string" minOccurs="0" />
+              <xs:element name="DATARECEBIMENTO" msprop:Generator_ColumnVarNameInTable="columnDATARECEBIMENTO" msprop:Generator_ColumnPropNameInRow="DATARECEBIMENTO" msprop:Generator_ColumnPropNameInTable="DATARECEBIMENTOColumn" msprop:Generator_UserColumnName="DATARECEBIMENTO" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="VALOR" msprop:Generator_ColumnVarNameInTable="columnVALOR" msprop:Generator_ColumnPropNameInRow="VALOR" msprop:Generator_ColumnPropNameInTable="VALORColumn" msprop:Generator_UserColumnName="VALOR" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

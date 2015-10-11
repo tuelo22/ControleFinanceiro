@@ -1,0 +1,70 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width">
+        <title>Gestor Financeiro - Acesso </title>
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link href="~/Content/bootstrap.css" rel="stylesheet" />
+        <link href="~/css/style.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="~/Scripts/bootstrap.js"></script>
+    
+    </head>
+<body>
+    <div class="header">
+        <div class="container-fluid">
+        <nav class="myNavbar navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="/UsuarioAutenticado/Home">Home</a></li>
+                   <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Receitas <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/UsuarioAutenticado/Receita">Cadastrar</a></li>
+                            <li><a href="/UsuarioAutenticado/EditarReceita">Atualizar</a></li>
+                            <li><a href="/UsuarioAutenticado/DeletarReceita">Deletar</a></li>
+                            <li><a href="/UsuarioAutenticado/BuscaReceita">Relatório</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Contas a Pagar <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/UsuarioAutenticado/ContaPagar">Cadastrar</a></li>
+                            <li><a href="/UsuarioAutenticado/EditarContaPagar">Atualizar</a></li>
+                            <li><a href="/UsuarioAutenticado/DeletarContaPagar">Deletar</a></li>
+                            <li><a href="/UsuarioAutenticado/BuscaContaPagar">Relatório</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        @Html.ActionLink("Sair do Sistema", "Logout", "Usuario", new { @role = "button" }, new { @class = "dropdown-toggle" })
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        </div>   
+    </div>
+    <div class="container">
+        @RenderBody()      
+    </div>
+</body>
+</html>

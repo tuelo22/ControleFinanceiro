@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetContaPagar" targetNamespace="http://tempuri.org/DataSetContaPagar.xsd" xmlns:mstns="http://tempuri.org/DataSetContaPagar.xsd" xmlns="http://tempuri.org/DataSetContaPagar.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetContaPagar" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetContaPagar" msprop:Generator_UserDSName="DataSetContaPagar">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CONTAPAGAR" msprop:Generator_TableClassName="CONTAPAGARDataTable" msprop:Generator_TableVarName="tableCONTAPAGAR" msprop:Generator_TablePropName="CONTAPAGAR" msprop:Generator_RowDeletingName="CONTAPAGARRowDeleting" msprop:Generator_RowChangingName="CONTAPAGARRowChanging" msprop:Generator_RowEvHandlerName="CONTAPAGARRowChangeEventHandler" msprop:Generator_RowDeletedName="CONTAPAGARRowDeleted" msprop:Generator_UserTableName="CONTAPAGAR" msprop:Generator_RowChangedName="CONTAPAGARRowChanged" msprop:Generator_RowEvArgName="CONTAPAGARRowChangeEvent" msprop:Generator_RowClassName="CONTAPAGARRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn" msprop:Generator_UserColumnName="CODIGO" type="xs:int" minOccurs="0" />
+              <xs:element name="NOME" msprop:Generator_ColumnVarNameInTable="columnNOME" msprop:Generator_ColumnPropNameInRow="NOME" msprop:Generator_ColumnPropNameInTable="NOMEColumn" msprop:Generator_UserColumnName="NOME" type="xs:string" minOccurs="0" />
+              <xs:element name="DATAPAGAMENTO" msprop:Generator_ColumnVarNameInTable="columnDATAPAGAMENTO" msprop:Generator_ColumnPropNameInRow="DATAPAGAMENTO" msprop:Generator_ColumnPropNameInTable="DATAPAGAMENTOColumn" msprop:Generator_UserColumnName="DATAPAGAMENTO" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="VALOR" msprop:Generator_ColumnVarNameInTable="columnVALOR" msprop:Generator_ColumnPropNameInRow="VALOR" msprop:Generator_ColumnPropNameInTable="VALORColumn" msprop:Generator_UserColumnName="VALOR" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
